@@ -1,0 +1,9 @@
+.git
+bitrix
+images
+logs
+log.txt
+upload
+*.gz
+.pma2
+~*

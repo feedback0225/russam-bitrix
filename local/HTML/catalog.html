@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Каталог</title>
+    <meta name="theme-color" content="#fff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body>
+    <div class="site-container">
+      <header class="header"> 
+        <div class="container header__container">
+          <div class="header__top"><a class="header__location" href="#">
+              <svg class="svg-icon location">
+                <use xlink:href="./img/sprites/sprite.svg#location"></use>
+              </svg>САНКТ-ПЕТЕРБУРГ</a>
+            <ul class="header-menu list-reset">
+              <li class="header-menu__item"><a class="header-menu__link" href="#">Императорский ювелирный дом</a></li>
+              <li class="header-menu__item"><a class="header-menu__link" href="#">ДОСТАВКА И ОПЛАТА</a></li>
+              <li class="header-menu__item"><a class="header-menu__link" href="#">МАГАЗИНЫ</a></li>
+            </ul>
+          </div>
+          <div class="header__middle">
+            <ul class="header-actions list-reset">
+              <li class="header-actions__item"><a class="header-actions__link" href="tel:88005553298">
+                  <svg class="svg-icon tel">
+                    <use xlink:href="./img/sprites/sprite.svg#tel"></use>
+                  </svg></a></li>
+              <li class="header-actions__item"><a class="header-actions__link" href="#">
+                  <svg class="svg-icon location">
+                    <use xlink:href="./img/sprites/sprite.svg#location"></use>
+                  </svg></a></li>
+            </ul>
+            <div class="tel header__tel"><a class="tel__value" href="tel:88005553298">8 (800) 555-32-98</a><span class="tel__desc">Пн-Пт 10:00-20:00, Сб, Вс до 17:00</span></div><a class="logo header__logo" href="/"><img src="img/logo-icon.svg" alt="Russkiye samotsvety"></a>
+            <button class="btn-reset menu-btn" aria-label="Кпопка бургер"><span class="menu-btn__line"></span><span class="menu-btn__line"></span><span class="menu-btn__line"></span><span class="menu-btn__line"></span><span class="menu-btn__close"></span></button>
+            <ul class="header__shop-nav shop-nav list-reset">
+              <li class="shop-nav__item"><a class="shop-nav__link shop-nav__link--favorite" href="#"><span class="shop-nav__icon shop-nav__icon--favorite"></span><span class="shop-nav__quantity">2</span></a></li>
+              <li class="shop-nav__item"><a class="shop-nav__link shop-nav__link--cart" href="#"><span class="shop-nav__icon shop-nav__icon--cart"></span><span class="shop-nav__quantity">13</span></a></li>
+              <li class="shop-nav__item"><a class="shop-nav__link shop-nav__link--cabinet" href="#"><span class="shop-nav__icon shop-nav__icon--cabinet"></span><span class="shop-nav__quantity">Войти</span></a></li>
+            </ul>
+          </div>
+          <div class="header__bottom">
+            <nav class="nav">
+              <ul class="nav__list list-reset">
+                <li class="nav__item"><a class="nav__link" href="catalog.html">УКРАШЕНИЯ</a></li>
+                <li class="nav__item"><a class="nav__link" href="#">ДОМ&АКСЕССУАРЫ</a></li>
+                <li class="nav__item"><a class="nav__link" href="#">ПОМОЛВКА</a></li>
+                <li class="nav__item"><a class="nav__link" href="#">ВЫСОКОЕ ЮВЕЛИРНОЕ ИСКУССТВО</a></li>
+                <li class="nav__item"><a class="nav__link nav__link--gray" href="#">КОЛЛЕКЦИЯ</a></li>
+                <li class="nav__item"><a class="nav__link nav__link--gray" href="#">АКЦИИ</a></li>
+              </ul>
+              <ul class="header-menu nav__header-menu list-reset">
+                <li class="header-menu__item"><a class="header-menu__link" href="#">Императорский ювелирный дом</a></li>
+                <li class="header-menu__item"><a class="header-menu__link" href="#">ДОСТАВКА И ОПЛАТА</a></li>
+                <li class="header-menu__item"><a class="header-menu__link" href="#">МАГАЗИНЫ</a></li>
+              </ul>
+            </nav>
+            <div class="search-form header__search-form">
+              <button class="btn-reset search-form__btn open-form">
+                <svg class="svg-icon search-icon">
+                  <use xlink:href="./img/sprites/sprite.svg#search-icon"></use>
+                </svg>
+              </button>
+              <form class="search-form__form" action="#">
+                <input class="search-form__input" type="search" name="s" placeholder="НАЙТИ...">
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="down-bar">
+          <div class="down-bar__item search-form">
+            <button class="btn-reset search-form__btn open-form down-bar__link">
+              <svg class="svg-icon search-icon">
+                <use xlink:href="./img/sprites/sprite.svg#search-icon"></use>
+              </svg>Поиск
+            </button>
+            <form class="down-bar__form search-form__form" action="#">
+              <input class="search-form__input" type="search" name="s" placeholder="НАЙТИ...">
+              <button class="btn-reset search-form__btn">
+                <svg class="svg-icon search-icon">
+                  <use xlink:href="./img/sprites/sprite.svg#search-icon"></use>
+                </svg>
+              </button>
+            </form>
+          </div>
+          <div class="down-bar__item"><a class="down-bar__link" href="#"><span class="shop-nav__icon shop-nav__icon--favorite"></span>Избранное</a></div>
+          <div class="down-bar__item"><a class="down-bar__link" href="#"><span class="shop-nav__icon shop-nav__icon--cart"></span>Корзина</a></div>
+          <div class="down-bar__item"><a class="down-bar__link" href="#"><span class="shop-nav__icon shop-nav__icon--cabinet"></span>Вход</a></div>
+        </div>
+        <div class="overlay">
+          <!--button.btn-reset.modal-btn(data-graph-animation="custom" data-graph-path="first" data-graph-speed="500") Открыть окно-->
+        </div>
+      </header>
+      <main class="main">
+        <section class="catalog">
+          <div class="container g-breadcrumbs__container">
+            <ul class="g-breadcrumbs__list list-reset">
+              <li class="g-breadcrumbs__item"><a class="g-breadcrumbs__link" href="/">Главная</a></li>
+              <li class="g-breadcrumbs__item"><a class="g-breadcrumbs__link" href="#">Результаты поиска</a></li>
+              <li class="g-breadcrumbs__item"><a class="g-breadcrumbs__link">Кольца</a></li>
+            </ul>
+          </div>
+          <div class="container catalog__container">
+            <h1 class="g-title g-title--center catalog__title">Кольца</h1>
+            <div class="catalog__content">
+              <div class="catalog__top">
+                <button class="btn-reset g-btn g-btn--stroke catalog-toggle catalog-toggle--active">
+                  <svg class="catalog-toggle__icon" width="24" height="24">
+                    <use class="catalog-toggle__icon-opened" xlink:href="./img/sprites/sprite.svg#open-filters"></use>
+                    <use class="catalog-toggle__icon-closed" xlink:href="./img/sprites/sprite.svg#close-filters"></use>
+                  </svg>Фильтры
+                </button><span class="catalog__quantity">356 товаров</span>
+              </div>
+              <div class="catalog__left">filter</div>
+              <div class="catalog__grid">grid</div>
+            </div>
+          </div>
+        </section>
+        <section class="banner">
+          <div class="container banner__container">
+            <div class="banner-left">
+              <h3 class="g-title g-title--white banner__subtitle">Пройдите простой тест за 1 минуту <br> и получите подборку украшений на телефон</h3>
+              <h2 class="g-title g-title--white banner__title">Подберем украшения по&nbsp;вашим пожеланиям и бюджету</h2>
+              <p class="banner__desc">Снимем видео, сделаем фотографии изделий, замерим&nbsp;размеры на&nbsp;линейке и&nbsp;пришлём вам в&nbsp;WhatsApp.</p><a class="banner__link g-btn g-btn--light" href="#">подобрать украшение</a><span class="banner__caption">Тест бесплатный. Ваши данные защищены</span>
+            </div>
+            <div class="banner__image"><img src="img/banner-image.png" alt="Фотография телефона"></div>
+            <div class="banner-right">
+              <h4 class="g-title g-title--white banner-right__title">Ответив на вопросы, вы получите:</h4>
+              <ul class="banner-list list-reset">
+                <li class="banner-list__item">
+                  <svg class="svg-icon promocode">
+                    <use xlink:href="./img/sprites/sprite.svg#promocode"></use>
+                  </svg><span class="g-title g-title--white banner-list__caption"> <span>Промокод на скидку 5%<br></span>SMS СООБЩЕНИЕМ</span>
+                </li>
+                <li class="banner-list__item">
+                  <svg class="svg-icon instruction">
+                    <use xlink:href="./img/sprites/sprite.svg#instruction"></use>
+                  </svg><span class="g-title g-title--white banner-list__caption"> <span>ИНСТРУКЦИЮ </span>КАК ПРОВЕРИТЬ КАЧЕСТВО ЮВЕЛИРНЫХ ИЗДЕЛИЙ</span>
+                </li>
+                <li class="banner-list__item">
+                  <svg class="svg-icon consultation">
+                    <use xlink:href="./img/sprites/sprite.svg#consultation"></use>
+                  </svg><span class="g-title g-title--white banner-list__caption"> <span>КОНСУЛЬТАЦИЮ </span>ЭКСПЕРТА СО&nbsp;СТАЖЕМ БОЛЕЕ 10 ЛЕТ</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="info">
+          <div class="container info__container">
+            <h2 class="g-title info__title">оФИЦИАЛЬНЫЙ САЙТ ЮВЕЛИРНЫХ ИЗДЕЛИЙ русские самоцветы</h2>
+            <p class="info__desc full-text">Интернет-галерея «Русские самоцветы» — уникальная онлайн-площадка, где представлена продукция собственного ювелирного завода. Официальный сайт ювелирного магазина содержит каталог украшений. В каталоге из более 4000 ювелирных изделий собраны украшения непревзойденного качества, которое гарантирует производитель из числа лидеров отрасли. Для каждого товара представлены не только качественные фотографии и видеоматериалы, но и <br> максимум полезной информации, которая помогает сделать выбор еще более комфортным, чем в салоне. Примерить украшения или посмотреть <br> Источник: © Русские Самоцветы</p><a class="g-link info__link" href="#">Читать дальше</a>
+            <button class="btn-reset g-link read-more info__more">Читать дальше</button>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="container footer__container">
+          <div class="footer__top">
+            <div class="footer__col">
+              <h2 class="g-title footer__title">
+                 КАТАЛОГ
+                <svg class="svg-icon arrow">
+                  <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+                </svg>
+              </h2>
+              <ul class="footer-menu list-reset">
+                <li class="footer-menu__item"><a class="footer-menu__link" href="#">коллекции</a></li>
+                <li class="footer-menu__item"><a class="footer-menu__link" href="#">украшения</a></li>
+                <li class="footer-menu__item"><a class="footer-menu__link" href="#">часы</a></li>
+                <li class="footer-menu__item"><a class="footer-menu__link" href="#">эксклюзив</a></li>
+                <li class="footer-menu__item"><a class="footer-menu__link" href="#">культовые изделия</a></li>
+                <li class="footer-menu__item"><a class="footer-menu__link" href="#">столовое серебро</a></li>
+                <li class="footer-menu__item"><a class="footer-menu__link" href="#">предметы интерьера</a></li>
+                <li class="footer-menu__item"><a class="footer-menu__link" href="#">акции</a></li>
+              </ul>
+            </div>
+            <div class="footer__col">
+              <h2 class="g-title footer__title footer__title--2">
+                 КАРТА САЙТА
+                <svg class="svg-icon arrow">
+                  <use xlink:href="./img/sprites/sprite.svg#arrow"></use>
+                </svg>
+              </h2>
+              <ul class="footer-menu list-reset">
+                <li class="footer-menu__item footer-menu__item--2"><a class="footer-menu__link footer-menu__link--2" href="#">Доставка и самовывоз</a></li>
+                <li class="footer-menu__item footer-menu__item--2"><a class="footer-menu__link footer-menu__link--2" href="#">оплата</a></li>
+                <li class="footer-menu__item footer-menu__item--2"><a class="footer-menu__link footer-menu__link--2" href="#">гарантия</a></li>
+                <li class="footer-menu__item footer-menu__item--2"><a class="footer-menu__link footer-menu__link--2" href="#">Вопросы и ответы</a></li>
+                <li class="footer-menu__item footer-menu__item--2"><a class="footer-menu__link footer-menu__link--2" href="#">услуги</a></li>
+                <li class="footer-menu__item footer-menu__item--2"><a class="footer-menu__link footer-menu__link--2" href="#">блог</a></li>
+                <li class="footer-menu__item footer-menu__item--2"><a class="footer-menu__link footer-menu__link--2" href="#">правила продажи</a></li>
+                <li class="footer-menu__item footer-menu__item--2 footer-menu__item--hidden"><a class="footer-menu__link footer-menu__link--2" href="#">о компании</a></li>
+                <li class="footer-menu__item footer-menu__item--2 footer-menu__item--hidden"><a class="footer-menu__link footer-menu__link--2" href="#">новости</a></li>
+                <li class="footer-menu__item footer-menu__item--2 footer-menu__item--hidden"><a class="footer-menu__link footer-menu__link--2" href="#">контакты</a></li>
+                <li class="footer-menu__item footer-menu__item--2 footer-menu__item--hidden"><a class="footer-menu__link footer-menu__link--2" href="#">Пользовательское соглашение</a></li>
+              </ul>
+            </div>
+            <div class="footer__col">
+              <ul class="footer-menu list-reset">
+                <li class="footer-menu__item footer-menu__item--2"><a class="footer-menu__link footer-menu__link--2" href="#">о компании</a></li>
+                <li class="footer-menu__item footer-menu__item--2"><a class="footer-menu__link footer-menu__link--2" href="#">новости</a></li>
+                <li class="footer-menu__item footer-menu__item--2"><a class="footer-menu__link footer-menu__link--2" href="#">контакты</a></li>
+                <li class="footer-menu__item footer-menu__item--2"><a class="footer-menu__link footer-menu__link--2" href="#">Пользовательское соглашение</a></li>
+              </ul>
+            </div>
+            <div class="footer-contacts">
+              <div class="tel footer__tel"><span class="tel__desc footer-contacts__desc">Звоните бесплатно по России</span><a class="tel__value" href="tel:88005553298">8 (800) 555-32-98</a><span class="tel__desc footer-contacts__desc">Пн-Пт 10:00-20:00, Сб,Вс 10:00-17:00</span><span class="tel__caption">31 декабря и 1 января с 12:00 до 18:00</span></div>
+              <div class="footer-social"><span class="footer-contacts__desc footer-social__title">Наши сообщества</span>
+                <ul class="footer-social__list list-reset">
+                  <li class="footer-social__item"><a class="footer-social__link" href="#">
+                      <svg class="svg-icon telegram">
+                        <use xlink:href="./img/sprites/sprite.svg#telegram"></use>
+                      </svg></a></li>
+                  <li class="footer-social__item"><a class="footer-social__link" href="#">
+                      <svg class="svg-icon instagram">
+                        <use xlink:href="./img/sprites/sprite.svg#instagram"></use>
+                      </svg></a></li>
+                  <li class="footer-social__item"><a class="footer-social__link" href="#">
+                      <svg class="svg-icon vk">
+                        <use xlink:href="./img/sprites/sprite.svg#vk"></use>
+                      </svg></a></li>
+                  <li class="footer-social__item"><a class="footer-social__link" href="#">
+                      <svg class="svg-icon facebook">
+                        <use xlink:href="./img/sprites/sprite.svg#facebook"></use>
+                      </svg></a></li>
+                </ul>
+              </div>
+              <address class="footer-contacts__desc footer__address">Санкт-Петербург, пл. Фаберже, 8</address><a class="footer__desc footer__tel--2" href="#">+7 (812) 448-65-88</a><a class="footer-contacts__desc" href="mailto:market@russam.ru">market@russam.ru</a>
+            </div>
+          </div><span class="footer__copy">2020 © Русские самоцветы</span>
+          <p class="footer__desc">Предложение не является публичной офертой. Цены на сайте и в розничной сети могут отличаться. Информация на сайте о товаре носит рекламный характер и расценивается как приглашение делать оферты на основании п.1 ст. 437 Гражданского кодекса РФ.</p>
+        </div>
+      </footer>
+    </div>
+    <script src="js/vendor.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

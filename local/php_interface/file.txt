@@ -1,0 +1,181 @@
+Array
+(
+    [ID] => 201559
+    [TITLE] => Заказ через корзину [1066]
+    [TYPE_ID] => 
+    [STAGE_ID] => LOSE
+    [PROBABILITY] => 
+    [CURRENCY_ID] => RUB
+    [OPPORTUNITY] => 208368.00
+    [IS_MANUAL_OPPORTUNITY] => N
+    [TAX_VALUE] => 0.00
+    [LEAD_ID] => 
+    [COMPANY_ID] => 0
+    [CONTACT_ID] => 56695
+    [QUOTE_ID] => 
+    [BEGINDATE] => 2023-01-10T03:00:00+03:00
+    [CLOSEDATE] => 2023-02-09T03:00:00+03:00
+    [ASSIGNED_BY_ID] => 11
+    [CREATED_BY_ID] => 1
+    [MODIFY_BY_ID] => 11
+    [DATE_CREATE] => 2023-01-10T22:41:23+03:00
+    [DATE_MODIFY] => 2023-02-09T15:58:34+03:00
+    [OPENED] => N
+    [CLOSED] => Y
+    [COMMENTS] => первый заказ
+    [ADDITIONAL_INFO] => 
+    [LOCATION_ID] => 
+    [CATEGORY_ID] => 0
+    [STAGE_SEMANTIC_ID] => F
+    [IS_NEW] => N
+    [IS_RECURRING] => N
+    [IS_RETURN_CUSTOMER] => N
+    [IS_REPEATED_APPROACH] => N
+    [SOURCE_ID] => 
+    [SOURCE_DESCRIPTION] => 
+    [ORIGINATOR_ID] => 
+    [ORIGIN_ID] => 1066
+    [MOVED_BY_ID] => 11
+    [MOVED_TIME] => 2023-02-09T15:58:34+03:00
+    [UTM_SOURCE] => 
+    [UTM_MEDIUM] => 
+    [UTM_CAMPAIGN] => 
+    [UTM_CONTENT] => 
+    [UTM_TERM] => 
+    [LAST_ACTIVITY_BY] => 1
+    [LAST_ACTIVITY_TIME] => 2023-01-10T22:41:23+03:00
+    [UF_CRM_1643283871] => Array
+        (
+        )
+
+    [UF_CRM_1643285355] => Array
+        (
+        )
+
+    [UF_CRM_1662371920] => Array
+        (
+        )
+
+    [UF_CRM_DCT_UID] => 
+    [UF_CRM_DCT_CID] => 
+    [UF_CRM_DCT_YA_CID] => 
+    [UF_CRM_DCT_CITY] => 
+    [UF_CRM_DCT_SOURCE] => 
+    [UF_CRM_DCT_MEDIUM] => 
+    [UF_CRM_DCT_CAMPAIGN] => 
+    [UF_CRM_DCT_CONTENT] => 
+    [UF_CRM_DCT_TERM] => 
+    [UF_CRM_DCT_DURATION] => 
+    [UF_CRM_DCT_PAGE] => 
+    [UF_CRM_DCT_CONTEXT] => 
+    [UF_CRM_DCT_CUSTOM] => 
+    [UF_CRM_DCT_WID_NAME] => 
+    [UF_CRM_DCT_TYPE] => 
+    [UF_CRM_ROISTAT] => 
+    [UF_CRM_AMO_66227] => 
+    [UF_CRM_AMO_66229] => 
+    [UF_CRM_AMO_66279] => 2037
+    [UF_CRM_AMO_66331] => 
+    [UF_CRM_AMO_66521] => 
+    [UF_CRM_AMO_614695] => 
+    [UF_CRM_AMO_658201] => 
+    [UF_CRM_AMO_663299] => 
+    [UF_CRM_AMO_675085] => Москва
+    [UF_CRM_AMO_775617] => 
+    [UF_CRM_AMO_775703] => 
+    [UF_CRM_AMO_776061] => 
+    [UF_CRM_AMO_776523] => 1395372537
+    [UF_CRM_AMO_776525] => 
+    [UF_CRM_AMO_777029] => 
+    [UF_CRM_612CBFCFE84C4] => 
+    [UF_CRM_RU_ANALITYCS] => 
+    [UF_CRM_RU_DIADOK] => Array
+        (
+        )
+
+    [UF_CRM_AMO_66243] => 
+    [UF_CRM_AMO_66245] => 
+    [UF_CRM_AMO_66277] => 
+    [UF_CRM_AMO_775761] => 
+    [UF_CRM_AMO_776183] => 
+    [UF_CRM_AMO_777623] => 
+    [UF_CRM_1634501220410] => 
+    [UF_CRM_1634501792548] => 
+    [UF_CRM_1634505564311] => 151
+    [UF_CRM_1636916607067] => Array
+        (
+        )
+
+    [UF_CRM_1639332179561] => 
+    [UF_CRM_1639332195477] => 
+    [UF_CRM_1639332211110] => 
+    [UF_CRM_1639332227599] => 
+    [UF_CRM_1639332246157] => 
+    [UF_CRM_1639332261958] => 
+    [UF_CRM_1639332277299] => 
+    [UF_CRM_1639332292864] => 
+    [UF_CRM_1639332307501] => 
+    [UF_CRM_1639332322421] => 
+    [UF_CRM_1639332339175] => 
+    [UF_CRM_1639332355166] => 
+    [UF_CRM_1639332378008] => 
+    [UF_CRM_1639332408078] => 
+    [UF_CRM_1639332421574] => 
+    [UF_CRM_1639332440020] => 
+    [UF_CRM_1639332454057] => 
+    [UF_CRM_1639332467708] => 
+    [UF_CRM_1639332481332] => 
+    [UF_CRM_1639332495321] => 
+    [UF_CRM_1640529738625] => Array
+        (
+        )
+
+    [UF_CRM_1640530084284] => 
+    [UF_CRM_1642964969964] => 
+    [UF_CRM_1642965000189] => 
+    [UF_CRM_1642965024322] => 
+    [UF_CRM_1642965080423] => 
+    [UF_CRM_1643208638085] => 
+    [UF_CRM_1643232234391] => 
+    [UF_CRM_1645997216619] => 201
+    [UF_CRM_1645997294806] => 207
+    [UF_CRM_1646930650638] => 
+    [UF_CRM_1648464335407] => 
+    [UF_CRM_1648464363486] => 
+    [UF_CRM_1648464382259] => 
+    [UF_CRM_1649259694405] => MSK83, Москва, ул. Маршала Новикова, 16
+    [UF_CRM_1652724485589] => 
+    [UF_CRM_1652724624430] => 
+    [UF_CRM_1652724655987] => 
+    [UF_CRM_6285050B1BBF5] => 
+    [UF_CRM_6285050BBDE0A] => 
+    [UF_CRM_1653990805475] => 
+    [UF_CRM_1653990851449] => 
+    [UF_CRM_1653991142020] => 
+    [UF_CRM_1658260747133] => 
+    [UF_CRM_1658260768027] => 
+    [UF_CRM_1659616675394] => Array
+        (
+        )
+
+    [UF_CRM_1659985643388] => Array
+        (
+        )
+
+    [UF_CRM_1663233216585] => 
+    [UF_CRM_1664175088859] => 0
+    [UF_CRM_LI_TRACKING] => 
+    [UF_CRM_LI_STATUS] => 
+    [UF_CRM_LI_HISTORY] => 
+    [UF_CRM_LI_CHECK] => 
+    [UF_CRM_LI_NP_HISTORY] => 
+    [UF_CRM_YA_CID] => 
+    [UF_CRM_YA_COST_FIELD_NAME] => 
+    [UF_CRM_CRMSTAT_CONV] => 
+    [UF_CRM_CDEKER] => 
+    [UF_CRM_1669107693157] => 
+    [UF_CRM_63A0337992816] => 
+    [UF_CRM_63A0337A64628] => 
+    [UF_CRM_1671463568671] => 
+    [UF_CRM_63AACA2903612] => 
+)

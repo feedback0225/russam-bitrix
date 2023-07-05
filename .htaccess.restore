@@ -1,0 +1,63 @@
+Options -Indexes 
+ErrorDocument 404 /404.php
+
+<IfModule mod_php.c>
+  php_flag session.use_trans_sid off
+</IfModule>
+
+<IfModule mod_php7.c>
+  php_flag session.use_trans_sid off
+</IfModule>
+
+<IfModule mod_rewrite.c>
+  Options +FollowSymLinks
+  RewriteEngine On
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-l
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !/bitrix/urlrewrite.php$
+  RewriteRule ^(.*)$ /bitrix/urlrewrite.php [L]
+  RewriteRule .* - [E=REMOTE_USER:%{HTTP:Authorization}]
+</IfModule>
+
+<IfModule mod_dir.c>
+  DirectoryIndex index.php index.html
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive on
+  ExpiresByType image/jpeg "access plus 3 day"
+  ExpiresByType image/gif "access plus 3 day"
+  ExpiresByType image/png "access plus 3 day"
+  ExpiresByType text/css "access plus 3 day"
+  ExpiresByType application/javascript "access plus 3 day"  
+</IfModule>
+
+<IfModule mod_rewrite.c>
+	RewriteEngine On	
+	RewriteCond %{HTTP_USER_AGENT} MegaIndex.ru [OR]
+	RewriteCond %{HTTP_USER_AGENT} SeekportBot [OR]
+	RewriteCond %{HTTP_USER_AGENT} Exabot [OR]
+	RewriteCond %{HTTP_USER_AGENT} IDBot [OR]
+	RewriteCond %{HTTP_USER_AGENT} Wotbox [OR]
+	RewriteCond %{HTTP_USER_AGENT} Baiduspider [OR]
+	RewriteCond %{HTTP_USER_AGENT} Baiduspider-image [OR]
+	RewriteCond %{HTTP_USER_AGENT} Baiduspider-video [OR]
+	RewriteCond %{HTTP_USER_AGENT} Baiduspider-news [OR]
+	RewriteCond %{HTTP_USER_AGENT} Baiduspider-favo [OR]
+	RewriteCond %{HTTP_USER_AGENT} Baiduspider-cpro [OR]
+	RewriteCond %{HTTP_USER_AGENT} Baiduspider-ads [OR]
+	RewriteCond %{HTTP_USER_AGENT} AhrefsBot [OR]
+	RewriteCond %{HTTP_USER_AGENT} MJ12bot [OR]
+	RewriteCond %{HTTP_USER_AGENT} Detectify [OR]
+	RewriteCond %{HTTP_USER_AGENT} dotbot [OR]
+	RewriteCond %{HTTP_USER_AGENT} Riddler [OR]
+	RewriteCond %{HTTP_USER_AGENT} SemrushBot [OR]
+	RewriteCond %{HTTP_USER_AGENT} LinkpadBot [OR]
+	RewriteCond %{HTTP_USER_AGENT} BLEXBot [OR]
+	RewriteCond %{HTTP_USER_AGENT} FlipboardProxy [OR]
+	RewriteCond %{HTTP_USER_AGENT} aiHitBot [OR]
+	RewriteCond %{HTTP_USER_AGENT} trovitBot [OR]
+	RewriteCond %{HTTP_USER_AGENT} Zeus
+	RewriteRule ^(.*)$ – [F,L]
+</IfModule>
