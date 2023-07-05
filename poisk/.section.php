@@ -1,0 +1,6 @@
+<?
+$sSectionName = "poisk";
+$arDirProperties = Array(
+
+);
+?>

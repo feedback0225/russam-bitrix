@@ -1,0 +1,130 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"Императорский ювелирный дом", 
+		"/about/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Доставка и оплата", 
+		"/delivery-payment/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"новости", 
+		"/news/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"контакты", 
+		"/contacts/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Гарантия", 
+		"/guarantee/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Качество", 
+		"/quality/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Производство", 
+		"/manufacturing/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"История", 
+		"/history/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Услуги", 
+		"/services/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Блог", 
+		"/blog/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Пользовательское соглашение", 
+		"/policy/", 
+		Array(), 
+		Array("hide"=>"y"), 
+		"" 
+	),
+	Array(
+		"Публичная оферта", 
+		"/public-offer/", 
+		Array(), 
+		Array("hide"=>"y"), 
+		"" 
+	),
+	Array(
+		"Полезные материалы", 
+		"/materials/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Вопросы и ответы", 
+		"/faq/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Статьи", 
+		"/stati/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Карьера", 
+		"https://old.russam.ru/vakansii/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Оптовым клиентам", 
+		"https://old.russam.ru/kontakty/?key=otdel_optovyh_prodazh", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Корпоративным клиентам", 
+		"https://old.russam.ru/kontakty/?key=otdel_korporativnyh_prodazh", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>

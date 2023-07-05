@@ -1,0 +1,350 @@
+Options -Indexes 
+ErrorDocument 404 /404.php
+
+<IfModule mod_php.c>
+  php_flag session.use_trans_sid off
+</IfModule>
+
+<IfModule mod_php7.c>
+  php_flag session.use_trans_sid off
+</IfModule>
+
+#301 редиректы
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	RewriteRule ^akcii/(.*)$ /sale/ [R=301,L]
+	RewriteRule ^kontakty/(.*)$ /contacts/ [R=301,L]
+	RewriteRule ^partneram/(.*)$ /about/ [R=301,L]
+	RewriteRule ^/novosti/(.*)$ /news/ [R=301,L]
+</IfModule>
+
+#редирект с старого на новый домен
+<IfModule mod_rewrite.c>
+  Options +FollowSymLinks
+  RewriteEngine On
+  RewriteCond %{HTTP_HOST} market.russam.ru
+  RewriteRule (.*) https://russam.ru/$1 [R=301,L]
+</IfModule>
+
+<IfModule mod_rewrite.c>
+  Options +FollowSymLinks
+  RewriteEngine On
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-l
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !/bitrix/urlrewrite.php$
+  RewriteRule ^(.*)$ /bitrix/urlrewrite.php [L]
+  RewriteRule .* - [E=REMOTE_USER:%{HTTP:Authorization}]
+</IfModule>
+
+<IfModule mod_dir.c>
+  DirectoryIndex index.php index.html
+</IfModule>
+
+
+#301 редиректы
+Redirect 301 /jewelry-center/	https://russam.ru/about/
+Redirect 301 /katalog/	 https://russam.ru/products/
+Redirect 301 /kompaniya/	https://russam.ru/about/
+Redirect 301 /kompaniya/istoriya/	https://russam.ru/history/
+Redirect 301 /kompaniya/pages/programma-lojaljnosti/	https://russam.ru/about/
+Redirect 301 /kompaniya/pages/quality/	https://russam.ru/quality/
+Redirect 301 /kompaniya/proekty/	https://russam.ru/about/
+Redirect 301 /kompaniya/proekty/*	https://russam.ru/about/
+Redirect 301 /kompaniya/proizvodstvo/	https://russam.ru/manufacturing/
+Redirect 301 /magaziny/	https://russam.ru/shops/
+Redirect 301 /main/	https://russam.ru/
+Redirect 301 /novosti/	https://russam.ru/news/
+Redirect 301 /novosti/*	https://russam.ru/news/
+Redirect 301 /uslugi/standart/	https://russam.ru/services/
+Redirect 301 /uslugi/standart/s_nanesenie-gravirovki-i-monogrammy/	https://russam.ru/services/
+Redirect 301 /uslugi/standart/s_nanesenie-logotipa/	https://russam.ru/services/
+Redirect 301 /uslugi/standart/s_pervaja-usluga/	https://russam.ru/services/
+Redirect 301 /uslugi/standart/s_podarochnaja-upakovka/	https://russam.ru/services/test-podarochnaya-upakovka/
+Redirect 301 /uslugi/standart/s_razrabotka-dizajna/	https://russam.ru/services/
+Redirect 301 /uslugi/standart/s_razrabotka-novoj-formy/	https://russam.ru/services/
+Redirect 301 /vakansii/	https://russam.ru/about/
+Redirect 301 /yuvelirnye_izdeliya_na_zakaz/	https://russam.ru/products/
+Redirect 301 /yuvelirnye_izdeliya_na_zakaz/*	https://russam.ru/products/
+Redirect 301 /yuvelirnye_izdeliya_optom/	https://russam.ru/products/
+Redirect 301 /yuvelirnye_izdeliya_optom/*	https://russam.ru/products/
+
+Redirect 301 /news/p16843-skidka_50_na_stolovoe_serebro_i_izdelija_iz_serebra/ https://russam.ru/news/
+Redirect 301 /news/p5796-russkie_samotsvety_predstavljajut_novuju_ocharovateljnuju_kollektsiju_podvesok_s_giljoshirovannoj_emalju/ https://russam.ru/news/
+Redirect 301 /news/p18878-vorkshop_dizajnerom-hudozhnikom_russkih_samotsvetov/  https://russam.ru/news/
+Redirect 301 /news/p26260-ao_russkie_samotsvety_vneseno_v_rejting_nadezhnyh_partnerov/  https://russam.ru/news/
+Redirect 301 /news/p26142-russkie_samotsvety_predstavili_ekskljuzivnye_izdelija_dlja_doma_faberge/ https://russam.ru/news/
+Redirect 301 /news/p1209-darim_led_za_pokupki/ https://russam.ru/news/
+Redirect 301 /news/p26439-novyj_master-klass_ot_russkih_samotsvetov_emalirovanie_broshi_tanets/ https://russam.ru/news/
+Redirect 301 /news/p26243-russkie_samotsvety_prinjali_uchastie_v_turisticheskom_forume_visit_st_petersburg_v_dubae/ https://russam.ru/news/
+Redirect 301 /news/p4695-novaja_kollektsija_malinki/ https://russam.ru/news/
+Redirect 301 /news/p18708-russkie_samotsvety_prinimajut_k_oplate_kartu_halva/ https://russam.ru/news/
+Redirect 301 /news/p18711-_novyj_salon_russkih_samotsvetov_v_mega_dybenko/ https://russam.ru/news/
+Redirect 301 /news/p4195-uchastnik_festivalja_chamovskikh/ https://russam.ru/news/
+Redirect 301 /news/p21318-obnovlenie_kollektsii_malinki/ https://russam.ru/news/
+Redirect 301 /news/p18921-uchastnik_festivalja--kolodko_aleksej/ https://russam.ru/news/
+Redirect 301 /news/p17109-uspejte_kupit_led_za_900_rublej/ https://russam.ru/news/
+Redirect 301 /news/p4259-otkrytie_vtorogo_peterburgskogo_juvelirnogo_festivalja_nasledie_faberzhe/ https://russam.ru/news/
+Redirect 301 /news/p5183-novyj_ekskljuzivnyj_garnitur_landyshi/ https://russam.ru/news/
+Redirect 301 /news/p25053-russkie_samotsvety_izgotovili_zolotuju_medal/ https://russam.ru/news/
+Redirect 301 /news/p26504-russkie_samotsvety_pozdravljajut_sankt-peterburg_s_dnem_goroda/ https://russam.ru/news/
+Redirect 301 /news/p19058-vesennie_podarki_dlja_vseh_pokupatelej/ https://russam.ru/news/
+Redirect 301 /news/p26479-_s_prazdnikom_svetloj_pashi/ https://russam.ru/news/
+Redirect 301 /news/p1195-russkie_samotsvety--partner_kubka_telekanala_ohotnik_i_rybolov/ https://russam.ru/news/
+Redirect 301 /news/p5801-russkie_samotsvety_pozdravljajut_s_nastupajuschim_prazdnikom_pashi_i_darjat_podarki/ https://russam.ru/news/
+Redirect 301 /news/p5209-novyj_ekskljuzivnyj_garnitur/ https://russam.ru/news/
+Redirect 301 /news/p1161-pozdravljaem_s_dnem_vesny_i_truda/ https://russam.ru/news/
+Redirect 301 /news/p1151-nkurs_detskogo_risunka_na_peterburgskom_pashaljnom_festivale_v_russkih_samotsvetah/ https://russam.ru/news/
+Redirect 301 /news/p1169-russkie_samotsvety_pozdravljajut_s_dnem_goroda/ https://russam.ru/news/
+Redirect 301 /news/p5506-pervyj_kubok_leningradskoj_oblasti_po_snezhnomu_zimnemu_goljfu/ https://russam.ru/news/
+Redirect 301 /news/p12885-smi_o_nas_russkie_samotsvety_popali_v_podborku_luchshih_juvelirnyh_zavodov_rossii/ https://russam.ru/news/
+Redirect 301 /news/p1124-priglashaem_na_pervyj_peterburgskij_juvelirnyj_festival_nasledie_faberzhe/ https://russam.ru/news/
+Redirect 301 /news/p5805-osvjaschenie_pravoslavnogo_assortimenta_i_podarkov/ https://russam.ru/news/
+Redirect 301 /news/p5506-pervyj_kubok_leningradskoj_oblasti_po_snezhnomu_zimnemu_goljfu/ https://russam.ru/news/
+Redirect 301 /news/p4272-nagrazhdenie_russkih_samotsvetov_na_vystavke_junwex_peterburg/ https://russam.ru/news/
+Redirect 301 /news/p1203-master-klass_ot_russkih_samotsvetov_na_vystavke_mir_kamnja/ https://russam.ru/news/
+Redirect 301 /news/p1156-svetlaja_pasha_na_peterburgskom_pashaljnom_festivale_v_russkih_samotsvetah/ https://russam.ru/news/
+Redirect 301 /news/p2436-s_rozhdestvom_hristovym/ https://russam.ru/news/
+Redirect 301 /news/p1124-priglashaem_na_pervyj_peterburgskij_juvelirnyj_festival_nasledie_faberzhe/ https://russam.ru/news/
+Redirect 301 /news/p1182-pozdravlenie_akb_lanta-bank_ao/ https://russam.ru/news/
+Redirect 301 /news/p12688-blagotvoriteljnyj_kontsert_v_russkih_samotsvetah/ https://russam.ru/news/
+Redirect 301 /news/p26288-russkie_samotsvety_prinjali_uchastie_v_juvelirnoj_vystavke_junwex_2021_sankt-peterburg/ https://russam.ru/news/
+Redirect 301 /news/p2436-s_rozhdestvom_hristovym/ https://russam.ru/news/
+Redirect 301 /news/p26479-_s_prazdnikom_svetloj_pashi/ https://russam.ru/news/
+Redirect 301 /news/p18688-russkie_samotsvety--partnery_svetskogo_kluba_uspeh/ https://russam.ru/news/
+Redirect 301 /news/p14985-raspisanie_master-klassov_na_ijul/ https://russam.ru/news/
+Redirect 301 /news/p12757-otkrytie_vystavki_ko_dnju_pobedy_i_vstrecha_s_veteranami_v_juvelirnom_tsentre/ https://russam.ru/news/
+Redirect 301 /news/p1153-master-klass_po_izgotovleniju_pashaljnyh_jaits/ https://russam.ru/news/
+Redirect 301 /news/p5506-pervyj_kubok_leningradskoj_oblasti_po_snezhnomu_zimnemu_goljfu/ https://russam.ru/news/
+Redirect 301 /news/p25446-v_juvelirnom_tsentre_faberzhe_8_sostojalas_igra_peterburgskie_tajny/ https://russam.ru/news/
+Redirect 301 /news/p12757-otkrytie_vystavki_ko_dnju_pobedy_i_vstrecha_s_veteranami_v_juvelirnom_tsentre/ https://russam.ru/news/
+Redirect 301 /news/p4203-uchastnik_vystavki_tatjana_borisova/ https://russam.ru/news/
+Redirect 301 /news/p14985-raspisanie_master-klassov_na_ijul/ https://russam.ru/news/
+Redirect 301 /news/p18374-16_nojabrja--otkrytie_novogo_salona_v_tk_nevskij_tsentr/ https://russam.ru/news/
+Redirect 301 /news/p12555-pravoslavnaja_beseda_skonstantinom_parhomenko/ https://russam.ru/news/
+Redirect 301 /news/p18887-uchastnik_festivalja--marija_gusarova/ https://russam.ru/news/
+Redirect 301 /news/p18540-noch_rasprodazh_zavershena/ https://russam.ru/news/
+Redirect 301 /news/p18536-noch_rasprodazh_prodlena/ https://russam.ru/news/
+Redirect 301 /news/p18901-uchastnik--tina_hmeljnitskaja/ https://russam.ru/news/
+Redirect 301 /news/p5749-otkrytie_vystavki__russkie_samotsvety_prodolzhaja_traditsii_karla_faberzhe/ https://russam.ru/news/
+Redirect 301 /news/p12018-shirokij_assortiment_juvelirnyh_izdelij_pravoslavnoj_tematiki/ https://russam.ru/news/
+Redirect 301 /news/p12687-russkie_samotsvety_na_vstreche_vremja_teatraljnyh_legend/ https://russam.ru/news/
+Redirect 301 /news/p13315-vystavka_istorii_russkih_samotsvetov_v_juvelirnom_tsentre_faberzhe_8/ https://russam.ru/news/
+Redirect 301 /news/p16804-russkie_samotsvety_prazdnujut_106_let/ https://russam.ru/news/
+Redirect 301 /news/p25862-russkie_samotsvety_pozdravljajut_s_dnem_zaschitnika_otechestva/ https://russam.ru/news/
+Redirect 301 /news/p26052-russkim_samotsvetam_108_let/ https://russam.ru/news/
+Redirect 301 /news/p1183-noch_rasprodazh_v_russkih_samotsvetah_zavershena/ https://russam.ru/news/
+Redirect 301 /news/p12655-obzor_vystavochnoj_ekspozitsii/ https://russam.ru/news/
+Redirect 301 /news/p16788-ikony_russkih_samotsvetov_na_peredache_lavrskie_vstrechi_so_svjaschennikom_anatoliem_pershinym/ https://russam.ru/news/
+Redirect 301 /news/p18889-lektsija_gabriel_galiny_nikolaevny/ https://russam.ru/news/
+Redirect 301 /news/p26074-russkie_samotsvety_otkryli_novyj_salon/ https://russam.ru/news/
+Redirect 301 /news/p26270-russkie_samotsvety_sozdali_znachki_dlja_ao_osobaja_ekonomicheskaja_zona_sankt-peterburg/ https://russam.ru/news/
+Redirect 301 /news/p26476-russkie_samotsvety_pozdravljajut_s_dnem_vesny_i_truda/ https://russam.ru/news/
+Redirect 301 /news/p1139-lektsii_na_juvelirnom_festivale_nasledie_faberzhe/ https://russam.ru/news/
+Redirect 301 /news/p1199-pozdravlenie_partnerov_gv_gold_s_uspeshnym_zapuskom_taryskogo_goka/ https://russam.ru/news/
+Redirect 301 /news/p12760-sdnem_pobedy/ https://russam.ru/news/
+Redirect 301 /news/p13044-finaljnaja_noch_raspodazh--poslednij_den/ https://russam.ru/news/
+Redirect 301 /news/p13314-russkie_samotsvety_predstavljajut_konferents-zal_faberzhe_holl/ https://russam.ru/news/
+Redirect 301 /news/p4210-uchastnik_festivalja_varvara_gamajun/ https://russam.ru/news/
+Redirect 301 /news/p12016-spetsialjnye_tseny_na_pravoslavnyj_assortiment/ https://russam.ru/news/
+Redirect 301 /news/p1217-chernaja_pjatnitsa_v_russkih_samotsvetah/ https://russam.ru/news/
+Redirect 301 /news/p12622-lektsija_kornevoj_galiny_nikolaevny/ https://russam.ru/news/
+Redirect 301 /news/p12701-juvelirnye_master-klassy_i_ekskursii_na_proizvodstvo/ https://russam.ru/news/
+Redirect 301 /news/p14932-neverojatnye_skidki_v_ijule/ https://russam.ru/news/
+Redirect 301 /news/p21824-dragotsennye_prizy_dlja_sportivnoj_aristokratii/ https://russam.ru/news/
+Redirect 301 /news/p25025-russkie_samotsvety_prinjali_uchastie_v_blagotvoriteljnom_auktsione_db_event/ https://russam.ru/news/
+Redirect 301 /news/p26252-v_russkih_samotsvetah_sostojalsja_regionaljnyj_chempionat_worldskills_russia_2020/ https://russam.ru/news/
+Redirect 301 /news/p26337-v_faberzhe_8_sostojalos_meroprijatie_juvelirnyj_etiket/ https://russam.ru/news/
+Redirect 301 /news/p4316-vizit_rukovoditelja_gohrana_rossii_jurina_a_v/ https://russam.ru/news/
+Redirect 301 /news/p4692-s_dnem_vseh_vljublennyh/ https://russam.ru/news/
+Redirect 301 /news/p5510-prazdnichnoe_meroprijatie_ko_dnju_8_marta_v_juvelirnom_tsentre_faberzhe_8/ https://russam.ru/news/
+Redirect 301 /news/p1207-juvelirnyj_zavod_na_vystavke_industrija_mody/ https://russam.ru/news/
+Redirect 301 /news/p1213-4_nojabrja--den_narodnogo_edinstva/ https://russam.ru/news/
+Redirect 301 /news/p1175-12_ijunja--den_rossii/ https://russam.ru/news/
+Redirect 301 /news/p12516-master-klass_po_izgotovleniju_zajtsev_iz_fetra/ https://russam.ru/news/
+Redirect 301 /news/p12842-russkie_samotsvety_na_peterburgskom_mezhdunarodnom_ekonomicheskom_forume/ https://russam.ru/news/
+Redirect 301 /news/p13045-noch_rasprodazh_zavershena/ https://russam.ru/news/
+Redirect 301 /news/p12516-master-klass_po_izgotovleniju_zajtsev_iz_fetra/ https://russam.ru/news/
+Redirect 301 /news/p14178-samye_vkusnye_skidki_vrusskih_samotsvetah/ https://russam.ru/news/
+Redirect 301 /news/p24941-dragotsennye_podarki_dlja_vashih_blizkih/ https://russam.ru/news/
+Redirect 301 /news/p25988-russkie_samotsvety_pozdravljajut_s_dnem_rossii/ https://russam.ru/news/
+Redirect 301 /news/p4575-obnovlennaja_kollektsija_nasledie_faberzhe/ https://russam.ru/news/
+Redirect 301 /news/p1125-skidka_50_na_vse_izdelija_v_dni_juvelirnogo_festivalja_nasledie_faberzhe/ https://russam.ru/news/
+Redirect 301 /news/p14173-russkie_samotsvety--partnery_tsarskoseljskogo_mundialja/ https://russam.ru/news/
+Redirect 301 /news/p4270-lektsii_anatolija_zolotareva/ https://russam.ru/news/
+Redirect 301 /news/p4697-novaja_kollektsija_majskij_sad/ https://russam.ru/news/
+Redirect 301 /news/p1131-lektsija_tiny_hmeljnitskoj_na_festivale_nasledie_faberzhe/ https://russam.ru/news/
+Redirect 301 /news/p1216-hit-parad_skidok_s_dg_groove/ https://russam.ru/news/
+Redirect 301 /news/p21624-s_dnem_pobedy/ https://russam.ru/news/
+Redirect 301 /news/p23066-russkie_samotsvety_primut_uchastie_v_juvelirnoj_vystavke_junwex_moskva_2019/ https://russam.ru/news/
+Redirect 301 /news/p25062-russkie_samotsvety_stali_sponsorami_rozhdestvenskogo_bala/ https://russam.ru/news/
+Redirect 301 /news/p26715-izmenenie_tsen_na_stolovoe_serebro/ https://russam.ru/news/
+Redirect 301 /news/p1196-105_let_so_dnja_osnovanija_russkih_samotsvetov/ https://russam.ru/news/
+Redirect 301 /news/p1204-priglashaem_na_junwex_2017_v_moskve/ https://russam.ru/news/
+Redirect 301 /news/p18430-russkie_samotsvety--partnery_festivalja_admiraltejskoe_tango/ https://russam.ru/news/
+Redirect 301 /news/p18855-torzhestvennoe_otkrytie_ezhegodnogo_sankt-peterburgskogo_juvelirnogo_festivalja_nasledie_faberzhe/ https://russam.ru/news/
+Redirect 301 /news/p2435-s_novym_2018_godom/ https://russam.ru/news/
+Redirect 301 /news/p26089-sohranenie_juvelirnyh_traditsij_russkie_samotsvety_i_akademija_im_shtiglitsa_objavili_tvorcheskij_konkurs/ https://russam.ru/news/
+Redirect 301 /news/p26285-russkie_samotsvety_pozdravljajut_s_mezhdunarodnym_dnem_juvelira/ https://russam.ru/news/
+Redirect 301 /news/p4249-uchastnik_festivalja_anatolij_zolotarev/ https://russam.ru/news/
+Redirect 301 /news/p1204-priglashaem_na_junwex_2017_v_moskve/ https://russam.ru/news/
+Redirect 301 /news/p1176-zharkaja_noch_rasprodazh_v_russkih_samotsvetah/ https://russam.ru/news/
+Redirect 301 /news/p1177-vystavka_katerov_i_jaht_v_portu_terijoki/ https://russam.ru/news/
+Redirect 301 /news/p1127-skidka_50_na_vse_vo_vseh_salonah_v_dni_festivalja_nasledie_faberzhe/ https://russam.ru/news/
+Redirect 301 /news/p1144-priglashaem_vas_na_ekskursiju_po_juvelirnomu_proizvodstvu/ https://russam.ru/news/
+Redirect 301 /news/p12676-uchastnitsa_blagotvoriteljnogo_kontserta--anna_malysheva/ https://russam.ru/news/
+Redirect 301 /news/p12707-otkrytie_novogo_diskont-tsentra_russkie_samotsvety/ https://russam.ru/news/
+Redirect 301 /news/p19030-noch_rasprodazh_v_russkih_samotsvetah/ https://russam.ru/news/
+Redirect 301 /news/p25948-russkie_samotsvety_pozdravljajut_s_dnem_vesny_i_truda/ https://russam.ru/news/
+Redirect 301 /news/p4206-uchastnik_vystavki_masterskaja_sergeja_faljkina/ https://russam.ru/news/
+Redirect 301 /news/p5208-priglashaem_na_vesennee_prazdnichnoe_meroprijatie_v_chest_8_marta/ https://russam.ru/news/
+Redirect 301 /news/p1172-s_dnem_zaschity_detej/ https://russam.ru/news/
+Redirect 301 /news/p1200-russkie_samotsvety--uchastniki_4-j_vystavki_jaht_i_katerov_na_vode_st_petersburg_international_boat_show/ https://russam.ru/news/
+Redirect 301 /news/p1172-s_dnem_zaschity_detej/ https://russam.ru/news/
+Redirect 301 /news/p1200-russkie_samotsvety--uchastniki_4-j_vystavki_jaht_i_katerov_na_vode_st_petersburg_international_boat_show/ https://russam.ru/news/
+Redirect 301 /news/p12843-pozdravljaem_sankt-peterburg_s_dnem_goroda/ https://russam.ru/news/
+Redirect 301 /news/p18856-lektsija_veseloj_eleny_sergeevny/ https://russam.ru/news/
+Redirect 301 /news/p18911-uchastnik--pahomova_nadezhda_petrovna/ https://russam.ru/news/
+Redirect 301 /news/p21288-russkie_samotsvety_v_konstantinovskom_dvortse/ https://russam.ru/news/
+Redirect 301 /news/p21324-international_women_club_spb_v_gostjah_u_russkih_samotsvetov/ https://russam.ru/news/
+Redirect 301 /news/p21827-simvol_baltiki_novyj_muzej_jantarja_pojavitsja_v_peterburge/ https://russam.ru/news/
+Redirect 301 /news/p2797-priglashaem_na_vtoroj_peterburgskij_juvelirnyj_festival_nasledie_faberzhe/ https://russam.ru/news/
+Redirect 301 /news/p5153-novaja_kollektsija_chasov_s_florentijskoj_mozaikoj/ https://russam.ru/news/
+Redirect 301 /news/p1163-serebrjanye_lozhki_za_2100_rublej/ https://russam.ru/news/
+Redirect 301 /news/p1166-zhdem_gostej_na_nashem_stende_na_junwex_novyj_russkij_stil_v_moskve/ https://russam.ru/news/
+Redirect 301 /news/p1180-prihodite_na_zharkuju_noch_rasprodazh_v_russkie_samotsvety/ https://russam.ru/news/
+Redirect 301 /news/p17457-russkie_samotsvety_nanedele_mody_vsankt-peterburge/ https://russam.ru/news/
+Redirect 301 /news/p17457-russkie_samotsvety_nanedele_mody_vsankt-peterburge/ https://russam.ru/news/
+Redirect 301 /news/p18429-russkie_samotsvety_na_vystavke_arabia_2018_v_bahrejne/ https://russam.r/news/
+Redirect 301 /news/p18888-master-klass_po_sozdaniju_filigrannoj_podveski/ https://russam.ru/news/
+Redirect 301 /news/p25061-russkie_samotsvety_sozdali_podarochnye_nabory_dlja_vhl/ https://russam.ru/news/
+Redirect 301 /news/p26353-russkie_samotsvety_pozdravljajut_s_8_marta/ https://russam.ru/news/
+Redirect 301 /news/p1222-novogodnie_skidki_v_juvelirnom_tsentre/ https://russam.ru/news/
+Redirect 301 /news/p18728-gost_rozhdestvenskogo_vechera_v_vip-zale_russkih_samotsvetov--marko_botstsato/ https://russam.ru/news/
+Redirect 301 /news/p17457-russkie_samotsvety_nanedele_mody_vsankt-peterburge/ https://russam.ru/news/
+Redirect 301 /news/p18429-russkie_samotsvety_na_vystavke_arabia_2018_v_bahrejne/ https://russam.ru/news/
+Redirect 301 /news/p18888-master-klass_po_sozdaniju_filigrannoj_podveski/ https://russam.ru/news/
+Redirect 301 /news/p25061-russkie_samotsvety_sozdali_podarochnye_nabory_dlja_vhl/ https://russam.ru/news/
+Redirect 301 /news/p26353-russkie_samotsvety_pozdravljajut_s_8_marta/ https://russam.ru/news/
+Redirect 301 /news/p1222-novogodnie_skidki_v_juvelirnom_tsentre/ https://russam.ru/news/
+Redirect 301 /news/p18728-gost_rozhdestvenskogo_vechera_v_vip-zale_russkih_samotsvetov--marko_botstsato/ https://russam.ru/news/
+Redirect 301 /news/p19026-darim_podarki_v_den_vseh_vljublennyh/ https://russam.ru/news/
+Redirect 301 /news/p25568-juvelirnyj_zavod_russkie_samotsvety_pozdravljaet_s_76-j_godovschinoj_so_dnja_snjatija_blokady_leningrada/ https://russam.ru/news/
+Redirect 301 /news/p25931-dostavka_pashaljnyh_podarkov_na_dom_ot_russkih_samotsvetov/ https://russam.ru/news/
+Redirect 301 /news/p16411-russkie_samotsvety_na_vk_fest/ https://russam.ru/news/
+Redirect 301 /news/p18842-ezhegodnyj_sankt-peterburgskij_juvelirnyj_festival_nasledie_faberzhe/ https://russam.ru/news/
+Redirect 301 /news/p26075-russkie_samotsvety_primut_uchastie_v_juvelirnoj_vystavke_junwex_moskva_2020/ https://russam.ru/news/
+Redirect 301 /news/p26390-russkie_samotsvety--partner_rossijskogo_neftegazovogo_sammita/ https://russam.ru/news/
+Redirect 301 /news/p26533-na_mihajlovskoj_ulitse_otkrylsja_butik_rs_imperial_jewelry_house/ https://russam.ru/news/
+Redirect 301 /news/p4564-vystavka_ambiente_vo_frankfurte-na-majne/ https://russam.ru/news/
+Redirect 301 /news/p5804-lektsija_komjagina_jurija_petrovicha/ https://russam.ru/news/
+Redirect 301 /news/p16683-skidki_do_70_na_juvelirnye_ukrashenija/ https://russam.ru/news/
+Redirect 301 /news/p19229-prazdnik_dlja_detej_maloohtinskogo_doma_trudoljubija/ https://russam.ru/news/
+Redirect 301 /news/p1174-priglashaem_provesti_vyhodnye_s_russkimi_samotsvetami_v_jahtennom_portu_terijoki/ https://russam.ru/news/
+Redirect 301 /news/p26533-na_mihajlovskoj_ulitse_otkrylsja_butik_rs_imperial_jewelry_house/ https://russam.ru/news/
+Redirect 301 /news/p4564-vystavka_ambiente_vo_frankfurte-na-majne/ https://russam.ru/news/
+Redirect 301 /news/p5804-lektsija_komjagina_jurija_petrovicha/ https://russam.ru/news/
+Redirect 301 /news/p16683-skidki_do_70_na_juvelirnye_ukrashenija/ https://russam.ru/news/
+Redirect 301 /news/p19229-prazdnik_dlja_detej_maloohtinskogo_doma_trudoljubija/ https://russam.ru/news/
+Redirect 301 /news/p25447-rezhim_raboty_juvelirnogo_tsentra_i_magazinov_v_predprazdnichnye_i_prazdnichnye_dni/ https://russam.ru/news/
+Redirect 301 /news/p26477-s_dnem_pobedy/ https://russam.ru/news/
+Redirect 301 /news/p1174-priglashaem_provesti_vyhodnye_s_russkimi_samotsvetami_v_jahtennom_portu_terijoki/ https://russam.ru/news/
+Redirect 301 /news/p18373-vstrecha_s_kompaniej_samotsvety_sokolova_v_vip-zale/ https://russam.ru/news/
+Redirect 301 /news/p18920-pozdravljaem_s_dnem_juvelira/ https://russam.ru/news/
+Redirect 301 /news/p19013-russkie_samotsvety_na_junwex_sankt-peterburg_2019/ https://russam.ru/news/
+Redirect 301 /news/p19060-novaja_kollektsija_ukrashenij_frost/ https://russam.ru/news/
+Redirect 301 /news/p25933-s_prazdnikom_svetloj_pashi/ https://russam.ru/news/
+Redirect 301 /news/p26238-russkie_samotsvety_predstavili_ekspozitsiju_rabot_zhana-ljuka_virara_buna/ https://russam.ru/news/
+Redirect 301 /news/p26391-pravila_konkursa_detskogo_risunka_pashaljnoe_chudo/ https://russam.ru/news/
+Redirect 301 /news/p4696-pozdravlenie_maloohtinskogo_doma_trudoljubija_s_jubileem_ot_russkih_samotsvetov/ https://russam.ru/news/
+Redirect 301 /news/p5800-v_ramkah_pashaljnogo_festivalja_russkie_samotsvety_priglashajut_vas_posetit_raznoobraznye_master-klassy_dlja_vsej_semji_v_juvelirnom_tsentre_faberzhe_8/ https://russam.ru/news/
+Redirect 301 /news/p1123-11_janvarja_2016_g_sostojalas_ocherednaja_lektsija_istoki_sovremennogo_gruzinskogo_iskusstva/ https://russam.ru/news/
+Redirect 301 /news/p1136-ulla_tillander_i_galina_korneva_v_gostjah_u_russkih_samotsvetov/ https://russam.ru/news/
+Redirect 301 /news/p25971-_russkie_samotsvety_pozdravljajut_s_dnem_rozhdenija_karla_faberzhe/ https://russam.ru/news/
+Redirect 301 /news/p18896-uchastnik_festivalja--tatjana_borisova/ https://russam.ru/news/
+Redirect 301 /news/p25941-v_juvelirnom_tsentre_faberzhe_8_otkryvaetsja_punkt_vydachi_zakazov/ https://russam.ru/news/
+Redirect 301 /news/p4333-blagotvoriteljnyj_master-klass_dlja_detej/ https://russam.ru/news/
+Redirect 301 /news/p1135-meroprijatie_dlja_partnerov_v_ramkah_vystavki_junwex_2017/ https://russam.ru/news/
+Redirect 301 /news/p26029-salony_russkie_samotsvety_i_faberzhe_8_snova_otkryty/ https://russam.ru/news/
+Redirect 301 /news/p26215-russkie_samotsvety_predstavili_izdelija_v_novom_dome_farfora/ https://russam.ru/news/
+Redirect 301 /news/p5509-s_mezhdunarodnym_zhenskim_dnem_8_marta/ https://russam.ru/news/
+Redirect 301 /news/p12007-sotrudnichestvo_s_blagotvoriteljnym_fondom_advita/ https://russam.ru/news/
+Redirect 301 /news/p12763-novinka_detskie_podarochnye_nabory/ https://russam.ru/news/
+Redirect 301 /news/p25557-russkie_samotsvety_primut_uchastie_v_juvelirnoj_vystavke_junwex_peterburg_2020/ https://russam.ru/news/
+Redirect 301 /news/p12763-novinka_detskie_podarochnye_nabory/ https://russam.ru/news/
+Redirect 301 /news/p25557-russkie_samotsvety_primut_uchastie_v_juvelirnoj_vystavke_junwex_peterburg_2020/ https://russam.ru/news/
+Redirect 301 /news/p5833-obzor_vystavochnyh_ekspozitsij/ https://russam.ru/news/
+Redirect 301 /news/p1189-russkie_samotsvety--uchastniki_x-go_rossijskogo_festivalja_mody_ples_na_volge_ljnjanaja_palitra/ https://russam.ru/news/
+Redirect 301 /news/p12740-pozdravljaem_sdnem_vesny_itruda/ https://russam.ru/news/
+Redirect 301 /news/p18857-uchastnik_festivalja--anna_mihajlova/ https://russam.ru/news/
+Redirect 301 /news/p18902-uchastnik--korneva_galina_nikolaevna/ https://russam.ru/news/
+Redirect 301 /news/p4340-smi_o_festivale_nasledie_faberzhe/ https://russam.ru/news/
+Redirect 301 /news/p5199-s_dnem_zaschitnika_otechestva/ https://russam.ru/news/
+Redirect 301 /news/p4340-smi_o_festivale_nasledie_faberzhe/ https://russam.ru/news/
+Redirect 301 /news/p5199-s_dnem_zaschitnika_otechestva/ https://russam.ru/news/
+Redirect 301 /news/p1190-russkie_samotsvety_predlagajut_ukrashenija_v_kredit/ https://russam.ru/news/
+Redirect 301 /news/p12015-pashaljnye_podarki/ https://russam.ru/news/
+Redirect 301 /news/p12872-c_dnem_zaschity_detej/ https://russam.ru/news/
+Redirect 301 /news/p12886-futboljnyj_master-klass_ot_russkih_samotsvetov/ https://russam.ru/news/
+Redirect 301 /news/p18895-uchastniki_festivalja--natalja_i_tatjana_tarasovy/ https://russam.ru/news/
+Redirect 301 /news/p21499-pashaljnyj_prazdnik_v_russkih_samotsvetah/ https://russam.ru/news/
+Redirect 301 /news/p26268-rezhim_raboty_firmennyh_salonov_russkie_samotsvety_v_novogodnie_prazdniki/ https://russam.ru/news/
+Redirect 301 /news/p4331-lektsija_tiny_hmeljnitskoj/ https://russam.ru/news/
+Redirect 301 /news/p1148-vstrechaj_vesnu_vmeste_s_russkimi_samotsvetami/ https://russam.ru/news/
+Redirect 301 /news/p12498-pressa_o_pashaljnom_festivale/ https://russam.ru/news/
+Redirect 301 /news/p19028-smi_o_juvelirnom_festivale_nasledie_faberzhe/ https://russam.ru/news/
+Redirect 301 /news/p21307-marina_skuljskaja_v_gostjah_u_russkih_samotsvetov/ https://russam.ru/news/
+Redirect 301 /news/p26114-russkie_samotsvety_predstavili_izdelija_v_univermage_harrods/ https://russam.ru/news/
+Redirect 301 /news/p26237-novyj_master-klass_rospis_emalju_elochnogo_shara_s_serebreniem/ https://russam.ru/news/
+Redirect 301 /news/p26396-juvelirnye_kruizy_russkie_samotsvety_i_mosturflot_dogovorilis_o_sotrudnichestve/ https://russam.ru/news/
+Redirect 301 /news/p1150-peterburgskij_pashaljnyj_festival_v_russkih_samotsvetah/ https://russam.ru/news/
+Redirect 301 /news/p12629-russkie_samotsvety_v_gostjah_u_juvelirnogo_salona_chastnaja_kollektsija/ https://russam.ru/news/
+Redirect 301 /news/p17298-zasedanie_obschestvennogo_soveta_krasnogvardejskogo_rajona_v_russkih_samotsvetah/ https://russam.ru/news/
+Redirect 301 /news/p12498-pressa_o_pashaljnom_festivale/ https://russam.ru/news/
+Redirect 301 /news/p19028-smi_o_juvelirnom_festivale_nasledie_faberzhe/ https://russam.ru/news/
+Redirect 301 /news/p21307-marina_skuljskaja_v_gostjah_u_russkih_samotsvetov/ https://russam.ru/news/
+Redirect 301 /news/p26114-russkie_samotsvety_predstavili_izdelija_v_univermage_harrods/ https://russam.ru/news/
+Redirect 301 /news/p26237-novyj_master-klass_rospis_emalju_elochnogo_shara_s_serebreniem/ https://russam.ru/news/
+Redirect 301 /news/p26396-juvelirnye_kruizy_russkie_samotsvety_i_mosturflot_dogovorilis_o_sotrudnichestve/ https://russam.ru/news/
+Redirect 301 /news/p1150-peterburgskij_pashaljnyj_festival_v_russkih_samotsvetah/ https://russam.ru/news/
+Redirect 301 /news/p12629-russkie_samotsvety_v_gostjah_u_juvelirnogo_salona_chastnaja_kollektsija/ https://russam.ru/news/
+Redirect 301 /news/p17298-zasedanie_obschestvennogo_soveta_krasnogvardejskogo_rajona_v_russkih_samotsvetah/ https://russam.ru/news/
+Redirect 301 /news/p25984-magaziny_russkie_samotsvety_vnov_otkryvajutsja/  https://russam.ru/news/
+
+<IfModule mod_expires.c>
+  ExpiresActive on
+  ExpiresByType image/jpeg "access plus 3 day"
+  ExpiresByType image/gif "access plus 3 day"
+  ExpiresByType image/png "access plus 3 day"
+  ExpiresByType text/css "access plus 3 day"
+  ExpiresByType application/javascript "access plus 3 day"  
+</IfModule>
+
+<IfModule mod_rewrite.c>
+	RewriteEngine On	
+	RewriteCond %{HTTP_USER_AGENT} MegaIndex.ru [OR]
+	RewriteCond %{HTTP_USER_AGENT} SeekportBot [OR]
+	RewriteCond %{HTTP_USER_AGENT} Exabot [OR]
+	RewriteCond %{HTTP_USER_AGENT} IDBot [OR]
+	RewriteCond %{HTTP_USER_AGENT} Wotbox [OR]
+	RewriteCond %{HTTP_USER_AGENT} Baiduspider [OR]
+	RewriteCond %{HTTP_USER_AGENT} Baiduspider-image [OR]
+	RewriteCond %{HTTP_USER_AGENT} Baiduspider-video [OR]
+	RewriteCond %{HTTP_USER_AGENT} Baiduspider-news [OR]
+	RewriteCond %{HTTP_USER_AGENT} Baiduspider-favo [OR]
+	RewriteCond %{HTTP_USER_AGENT} Baiduspider-cpro [OR]
+	RewriteCond %{HTTP_USER_AGENT} Baiduspider-ads [OR]
+	RewriteCond %{HTTP_USER_AGENT} AhrefsBot [OR]
+	RewriteCond %{HTTP_USER_AGENT} MJ12bot [OR]
+	RewriteCond %{HTTP_USER_AGENT} Detectify [OR]
+	RewriteCond %{HTTP_USER_AGENT} dotbot [OR]
+	RewriteCond %{HTTP_USER_AGENT} Riddler [OR]
+	RewriteCond %{HTTP_USER_AGENT} SemrushBot [OR]
+	RewriteCond %{HTTP_USER_AGENT} LinkpadBot [OR]
+	RewriteCond %{HTTP_USER_AGENT} BLEXBot [OR]
+	RewriteCond %{HTTP_USER_AGENT} FlipboardProxy [OR]
+	RewriteCond %{HTTP_USER_AGENT} aiHitBot [OR]
+	RewriteCond %{HTTP_USER_AGENT} trovitBot [OR]
+	RewriteCond %{HTTP_USER_AGENT} Zeus
+	RewriteRule ^(.*)$ � [F,L]
+</IfModule>

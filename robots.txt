@@ -1,0 +1,14 @@
+User-Agent: *
+Disallow: /login/
+Disallow: /site/
+Disallow: /en/*
+Disallow: /ru/*
+Disallow: /main/search/*
+Disallow: /?key=*
+Disallow: /uslugi/standart/s_pervaja-usluga/
+Disallow: /filter/
+Disallow: /bitrix/
+Disallow: /yKwWhWFc/
+
+Clean-param: order&sort&sort_2
+Sitemap: https://russam.ru/sitemap.xml
